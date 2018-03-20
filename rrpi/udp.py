@@ -33,5 +33,5 @@ class Client:
 
     def send(self, data):
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.sendto(data, (self._host, self._port))
+        output = sock.sendto(data, (self._host, self._port))
         return output
